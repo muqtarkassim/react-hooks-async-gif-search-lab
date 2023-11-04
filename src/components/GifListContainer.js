@@ -5,10 +5,9 @@ import "./App.css";
 export default function GiftList(){
     const[data3,setdata3]=useState([]);
     const[input,setinput]=useState("")
-    const [que, setQue] = useState("dolphin"); // Initialize que as a state variable
-
+    const [que, setQue] = useState("dolphin"); 
     useEffect(() => {
-      // Use que from the state as the value in the API URL
+      
       fetch(`https://api.giphy.com/v1/gifs/search?q=${que}&api_key=Qu7imh455IR6iKq59cU1jq7CF4Skqunj`)
         .then((r) => r.json())
         .then((data) => {
@@ -20,7 +19,7 @@ export default function GiftList(){
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      // Update que with the value entered in the form
+      
       setQue(input);
     };
   
